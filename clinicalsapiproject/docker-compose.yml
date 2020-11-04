@@ -1,0 +1,15 @@
+version: '3'
+services:
+    clinicalsapp:
+        container_name: clinicalsapi
+        restart: always
+        build: .
+        ports:
+            - '80:8000'
+        links: 
+            - mongo
+    mongo:
+        container_name: mongo
+        image: mongo
+        ports:
+            - '27017:27017'

@@ -1,0 +1,15 @@
+{
+  "name": "firstpackage",
+  "version": "1.0.0",
+  "description": "my very first node package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bharath thippireddy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  }
+}
