@@ -51,10 +51,13 @@ router.put('/products/:id',(req,res)=>{
 })
 
 router.delete('/products/:id',(req,res)=>{
-    Product.findByIdAndDelete({_id:req.params.id},(err,result)=>{
+    Product.findByIdAndDelete({_id:req.params.id},(err,product,result)=>{
         if(err)console.log(err);
-        res.send(result);
-
+        if(!product) {
+            res.status(400).send("Product not found!");
+        } else {
+            res.send(result);
+        }
     })
 })
 
